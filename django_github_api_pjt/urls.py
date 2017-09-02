@@ -14,9 +14,10 @@ Including another URLconf
     2. Import the include() function: from django.conf.urls import url, include
     3. Add a URL to urlpatterns:  url(r'^blog/', include(blog_urls))
 """
-from django.conf.urls import url
+from django.conf.urls import url , include 
 from django.contrib import admin
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
+    url(r'^app/', include('app.urls')),  #Now, our URLs may be accessed as http://127.0.0.1:8000/app/<view url>
 ]
