@@ -7,3 +7,6 @@ from django.shortcuts import render , HttpResponse
 def index(request):
     return HttpResponse('Hello World!')
     
+def test(request):
+    return HttpResponse('Second view=>test!')
+    
